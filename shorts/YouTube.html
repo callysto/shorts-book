@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Including YouTube videos &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Drawing in HTML and SVG" href="HTML_Drawing.html" />
+    <link rel="prev" title="Including GIFs" href="GIFs.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="active">
+    <a href="">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="">
+    <a href="WebGL.html">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="">
+    <a href="Geogebra.html">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="">
+    <a href="Slideshow_Callysto.html"><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="">
+    <a href="Github.html">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/YouTube.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/YouTube.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/YouTube.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-1" class="nav-link">Example 1</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-2" class="nav-link">Example 2</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=YouTube.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="including-youtube-videos">
+<h1>Including YouTube videos<a class="headerlink" href="#including-youtube-videos" title="Permalink to this headline">¶</a></h1>
+<p>YouTube videos can be found online at https://www.youtube.com</p>
+<p>When you find the video you want, click on the “share” button on the YouTube page, and you will get a web reference that looks something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">youtu</span><span class="o">.</span><span class="n">be</span><span class="o">/</span><span class="n">ZmhlRsYjs7Y</span>
+</pre></div>
+</div>
+<p>It is this last string of characters that you need.</p>
+<p>In a code cell, you enter the commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ZmhlRsYjs7Y&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>Run the cell, and the video is ready to play!</p>
+<p>(In this example below, we are using the Small Number videos from SFU.)</p>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>Here is a sample YouTube video, loaded in from the internet. The code is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ZmhlRsYjs7Y&#39;</span><span class="p">)</span> <span class="c1">## Small Number video from SFU</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;ZmhlRsYjs7Y&#39;</span><span class="p">)</span> <span class="c1">## Small Number video from SFU</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="400"
+    height="300"
+    src="https://www.youtube.com/embed/ZmhlRsYjs7Y"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+<p>Here is the same YouTube video, starting at 30 seconds in.
+We use the html magic to run this, which gives us more control.
+Note that we grabbed the code from the “Embed” option on the YouTube webpage, that gives the iframe commands with options.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;300&quot;</span>  <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/ZmhlRsYjs7Y?start=30&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">allow</span><span class="o">=</span><span class="s2">&quot;autoplay; encrypted-media&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;300&quot;</span>  <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/ZmhlRsYjs7Y?start=30&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">allow</span><span class="o">=</span><span class="s2">&quot;autoplay; encrypted-media&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="300"  src="https://www.youtube.com/embed/ZmhlRsYjs7Y?start=30" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div></div>
+</div>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="GIFs.html" title="previous page">Including GIFs</a>
+    <a class='right-next' id="next-link" href="HTML_Drawing.html" title="next page">Drawing in HTML and SVG</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

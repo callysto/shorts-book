@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Including Geogebra &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Slideshows" href="Slideshow.html" />
+    <link rel="prev" title="Implementing a progress bar" href="ProgressBar.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="">
+    <a href="YouTube.html">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="">
+    <a href="WebGL.html">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="D3.html">Animations in D3</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="active">
+    <a href="">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="">
+    <a href="Slideshow2Callysto.html"><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="">
+    <a href="Github.html">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/Geogebra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/Geogebra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/Geogebra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-1" class="nav-link">Example 1</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-2" class="nav-link">Example 2</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notes" class="nav-link">Notes.</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=Geogebra.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="including-geogebra">
+<h1>Including Geogebra<a class="headerlink" href="#including-geogebra" title="Permalink to this headline">¶</a></h1>
+<p>Geogebra is an exciting application for doing geometry, albegra, and other mathematical exercises online. You access it here: https://www.geogebra.org/</p>
+<p>This notebook is not a tutorial on Geogebra; you’ll need to figure that out yourself. Also <strong>note</strong> this probably doesn’t work in a static Jupyter Book. You will need to run it in Callysto by clicking on the “Open in Callysto” button above.</p>
+<p>However, once you know how to make a Geogebra application, you can then include it into a Jupyter notebook.</p>
+<p>First step is to use the geogebra.org website to create your app, then export it (download it) as a .ggb file.</p>
+<p>Second step is to upload it onto the Jupyter hub, using the “upload” on the hub menu.</p>
+<p>Third, you set up some initialization in your Jupyter notebook, that looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.geogebra.org/apps/deployggb.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Fourth, you now read in the file (in this case, names geo-test.ggb) into a cell in the Jupyter notebook, like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;ggb-point&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="n">var</span> <span class="n">ggbApp</span> <span class="o">=</span> <span class="n">new</span> <span class="n">GGBApplet</span><span class="p">({</span>
+      <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+      <span class="s2">&quot;showToolBar&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showMenuBar&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showAlgebraInput&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showResetIcon&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;enableLabelDrags&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;enableRightClick&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;enableShiftDragZoom&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;useBrowserForJS&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;geo-test.ggb&quot;</span>
+  <span class="p">},</span> <span class="s1">&#39;ggb-point&#39;</span><span class="p">);</span>
+
+  <span class="n">ggbApp</span><span class="o">.</span><span class="n">inject</span><span class="p">();</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You now will have a working Geogebra application running inside the Jupyter notebook. Note in the commands above, there are a bunch of true/false options for turning on and off various features in the Geogebra application. You can experiment with these until you get the right collection of options desired.</p>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>First, we do the setup. Note the following is a “code” cell, not markdown.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.geogebra.org/apps/deployggb.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+</div></div>
+</div>
+<p>Next we load in the Geogebra app with the following code. Note the local file name here is geo-test.ggb. You will have to use the name of your file to get it to load.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;ggb-point&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="n">var</span> <span class="n">ggbApp</span> <span class="o">=</span> <span class="n">new</span> <span class="n">GGBApplet</span><span class="p">({</span>
+      <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+      <span class="s2">&quot;showToolBar&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showMenuBar&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showAlgebraInput&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;showResetIcon&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;enableLabelDrags&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;enableRightClick&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;enableShiftDragZoom&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s2">&quot;useBrowserForJS&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+      <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;geo-test.ggb&quot;</span>
+  <span class="p">},</span> <span class="s1">&#39;ggb-point&#39;</span><span class="p">);</span>
+
+  <span class="n">ggbApp</span><span class="o">.</span><span class="n">inject</span><span class="p">();</span>
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="ggb-point"></div>
+
+<script>
+  var ggbApp = new GGBApplet({
+      "height": 400,
+      "showToolBar": false,
+      "showMenuBar": false,
+      "showAlgebraInput": false,
+      "showResetIcon": true,
+      "enableLabelDrags": false,
+      "enableRightClick": false,
+      "enableShiftDragZoom": true,
+      "useBrowserForJS": false,
+      "filename": "geo-test.ggb"
+  }, 'ggb-point');
+
+  ggbApp.inject();
+</script>
+</div></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try this using the D3 example of how to do Javascript in a solid way.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;div id=&quot;ggb-point2&quot;&gt;&lt;/div&gt;</span>
+<span class="s1">&lt;script&gt; </span>
+<span class="s1">    require.config({paths: {gb: &quot;https://cdn.geogebra.org/apps/deployggb&quot;}});</span>
+<span class="s1">    require([&quot;gb&quot;], function(gb) {</span>
+<span class="s1">      var ggbApp = new GGBApplet({</span>
+<span class="s1">          &quot;height&quot;: 400,</span>
+<span class="s1">          &quot;showToolBar&quot;: false,</span>
+<span class="s1">          &quot;showMenuBar&quot;: false,</span>
+<span class="s1">          &quot;showAlgebraInput&quot;: false,</span>
+<span class="s1">          &quot;showResetIcon&quot;: true,</span>
+<span class="s1">          &quot;enableLabelDrags&quot;: false,</span>
+<span class="s1">          &quot;enableRightClick&quot;: false,</span>
+<span class="s1">          &quot;enableShiftDragZoom&quot;: true,</span>
+<span class="s1">          &quot;useBrowserForJS&quot;: false,</span>
+<span class="s1">          &quot;filename&quot;: &quot;geo-test.ggb&quot;</span>
+<span class="s1">      }, &#39;ggb-point2&#39;);</span>
+
+<span class="s1">  ggbApp.inject();</span>
+<span class="s1">    });</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="ggb-point2"></div>
+<script> 
+    require.config({paths: {gb: "https://cdn.geogebra.org/apps/deployggb"}});
+    require(["gb"], function(gb) {
+      var ggbApp = new GGBApplet({
+          "height": 400,
+          "showToolBar": false,
+          "showMenuBar": false,
+          "showAlgebraInput": false,
+          "showResetIcon": true,
+          "enableLabelDrags": false,
+          "enableRightClick": false,
+          "enableShiftDragZoom": true,
+          "useBrowserForJS": false,
+          "filename": "geo-test.ggb"
+      }, 'ggb-point2');
+
+  ggbApp.inject();
+    });
+</script>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## sometime we need to run this a few times!</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_text</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_text</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="ggb-point2"></div>
+<script> 
+    require.config({paths: {gb: "https://cdn.geogebra.org/apps/deployggb"}});
+    require(["gb"], function(gb) {
+      var ggbApp = new GGBApplet({
+          "height": 400,
+          "showToolBar": false,
+          "showMenuBar": false,
+          "showAlgebraInput": false,
+          "showResetIcon": true,
+          "enableLabelDrags": false,
+          "enableRightClick": false,
+          "enableShiftDragZoom": true,
+          "useBrowserForJS": false,
+          "filename": "geo-test.ggb"
+      }, 'ggb-point2');
+
+  ggbApp.inject();
+    });
+</script>
+</div><div class="output text_html">
+<div id="ggb-point2"></div>
+<script> 
+    require.config({paths: {gb: "https://cdn.geogebra.org/apps/deployggb"}});
+    require(["gb"], function(gb) {
+      var ggbApp = new GGBApplet({
+          "height": 400,
+          "showToolBar": false,
+          "showMenuBar": false,
+          "showAlgebraInput": false,
+          "showResetIcon": true,
+          "enableLabelDrags": false,
+          "enableRightClick": false,
+          "enableShiftDragZoom": true,
+          "useBrowserForJS": false,
+          "filename": "geo-test.ggb"
+      }, 'ggb-point2');
+
+  ggbApp.inject();
+    });
+</script>
+</div><div class="output text_html">
+<div id="ggb-point2"></div>
+<script> 
+    require.config({paths: {gb: "https://cdn.geogebra.org/apps/deployggb"}});
+    require(["gb"], function(gb) {
+      var ggbApp = new GGBApplet({
+          "height": 400,
+          "showToolBar": false,
+          "showMenuBar": false,
+          "showAlgebraInput": false,
+          "showResetIcon": true,
+          "enableLabelDrags": false,
+          "enableRightClick": false,
+          "enableShiftDragZoom": true,
+          "useBrowserForJS": false,
+          "filename": "geo-test.ggb"
+      }, 'ggb-point2');
+
+  ggbApp.inject();
+    });
+</script>
+</div></div>
+</div>
+</div>
+<div class="section" id="notes">
+<h2>Notes.<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>In a Jupyter Book, the %%html script may not work. I don’t know why.</p>
+<p>The display(HTML(…)) command seems to work better. But maybe you have to run it twice!</p>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="ProgressBar.html" title="previous page">Implementing a progress bar</a>
+    <a class='right-next' id="next-link" href="Slideshow.html" title="next page">Slideshows</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

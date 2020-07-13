@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Including WebGL animations &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using Pylab" href="Pylab.html" />
+    <link rel="prev" title="3D graphics" href="3D_graphics.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="">
+    <a href="YouTube.html">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="active">
+    <a href="">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="">
+    <a href="Geogebra.html">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="">
+    <a href="Slideshow_Callysto.html"><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="">
+    <a href="Github.html">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/WebGL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/WebGL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/WebGL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-1" class="nav-link">Example 1</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#html-file" class="nav-link">Html file</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#webgl-javascript-file" class="nav-link">Webgl Javascript file</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#gl-matrix-js-helper-file" class="nav-link">gl-matrix.js helper file</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=WebGL.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="including-webgl-animations">
+<h1>Including WebGL animations<a class="headerlink" href="#including-webgl-animations" title="Permalink to this headline">¶</a></h1>
+<p>WebGL is used for 3D animation, making good use of any graphics acceleration and hardware available to the computer. WebGL is based on OpenGL, a rich graphics language for high performance visualizations.</p>
+<p>A WebGL-compatible web browser is required, such as FireFox or Safari. As of January 2020, Google Chrome is unfortunately not compatible.</p>
+<p>This notebook, is not meant to be an introduction to WebGL. All we do is show how to use it in a Jupyter notebook.</p>
+<p>The key is to use HTML magic and iframes to include the notebook.</p>
+<p>In this example, we need three files to get this to work:</p>
+<ul class="simple">
+<li><p>webgl-demo.html (the file that iframe will load)</p></li>
+<li><p>webgl-demo.js (the javascript that creates the animation)</p></li>
+<li><p>gl-matrix.js  (some helper code for 3D work)</p></li>
+</ul>
+<p>These are all loaded in this repo.</p>
+<p>The key piece of code to display the animation looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;webgl-demo.html&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;500&quot;</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>I’ll run it just below. And further below, I will show you the code in the 3 files.</p>
+<p>Note this code is based on the examples in this repo:  https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial</p>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>Here is the animation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">html</span>
+<span class="o">&lt;</span><span class="n">iframe</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;webgl-demo.html&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;500&quot;</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="webgl-demo.html" width="500" height=500></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="html-file">
+<h2>Html file<a class="headerlink" href="#html-file" title="Permalink to this headline">¶</a></h2>
+<p>Here is the content of the file “webgl-demo.html”</p>
+<p>Note to edit this file in the Jupyter hub, you will need to change the file type to “.txt”, edit it and save, then rename as a “.html” file. Not sure why, but it is a useful hack for editing special files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">WebGL</span> <span class="n">Demo</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">canvas</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;glcanvas&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;640&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;480&quot;</span><span class="o">&gt;&lt;/</span><span class="n">canvas</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;gl-matrix.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;webgl-demo.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="webgl-javascript-file">
+<h2>Webgl Javascript file<a class="headerlink" href="#webgl-javascript-file" title="Permalink to this headline">¶</a></h2>
+<p>Here is the start of the content of the file Webgl-demo.js, which is a bunch of javascript to set up the animation. It’s pretty long and complex, so you would need to learn to write in Webgl, or borrow someone else’s code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">squareRotation</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+<span class="n">main</span><span class="p">();</span>
+
+<span class="o">//</span>
+<span class="o">//</span> <span class="n">Start</span> <span class="n">here</span>
+<span class="o">//</span>
+<span class="n">function</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">const</span> <span class="n">canvas</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s1">&#39;#glcanvas&#39;</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">gl</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">getContext</span><span class="p">(</span><span class="s1">&#39;webgl&#39;</span><span class="p">);</span>
+<span class="o">....</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gl-matrix-js-helper-file">
+<h2>gl-matrix.js helper file<a class="headerlink" href="#gl-matrix-js-helper-file" title="Permalink to this headline">¶</a></h2>
+<p>Finally, here is the start of the content of the file gl-matrix.js, which is a bunch of javascript to facilitate animation. It’s pretty long and complex. Note the copyright notice, it comes from Brandon Jones and Colin MacKenzie.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="nd">@fileoverview</span> <span class="n">gl</span><span class="o">-</span><span class="n">matrix</span> <span class="o">-</span> <span class="n">High</span> <span class="n">performance</span> <span class="n">matrix</span> <span class="ow">and</span> <span class="n">vector</span> <span class="n">operations</span>
+ <span class="o">*</span> <span class="nd">@author</span> <span class="n">Brandon</span> <span class="n">Jones</span>
+ <span class="o">*</span> <span class="nd">@author</span> <span class="n">Colin</span> <span class="n">MacKenzie</span> <span class="n">IV</span>
+ <span class="o">*</span> <span class="nd">@version</span> <span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span>
+ <span class="o">*/</span>
+
+<span class="o">/*</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2015</span><span class="p">,</span> <span class="n">Brandon</span> <span class="n">Jones</span><span class="p">,</span> <span class="n">Colin</span> <span class="n">MacKenzie</span> <span class="n">IV</span><span class="o">.</span>
+<span class="n">Permission</span> <span class="ow">is</span> <span class="n">hereby</span> <span class="n">granted</span><span class="p">,</span> <span class="n">free</span> <span class="n">of</span> <span class="n">charge</span><span class="p">,</span> <span class="n">to</span> <span class="nb">any</span> <span class="n">person</span> <span class="n">obtaining</span> <span class="n">a</span> <span class="n">copy</span>
+<span class="n">of</span> <span class="n">this</span> <span class="n">software</span> <span class="ow">and</span> <span class="n">associated</span> <span class="n">documentation</span> <span class="n">files</span> <span class="p">(</span><span class="n">the</span> <span class="s2">&quot;Software&quot;</span><span class="p">),</span> 
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="3D_graphics.html" title="previous page">3D graphics</a>
+    <a class='right-next' id="next-link" href="Pylab.html" title="next page">Using Pylab</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
