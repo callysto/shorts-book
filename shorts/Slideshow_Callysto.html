@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>An Awesome Slide Show &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hiding code" href="Hiding.html" />
+    <link rel="prev" title="Slideshows" href="Slideshow.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="">
+    <a href="YouTube.html">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="">
+    <a href="WebGL.html">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="">
+    <a href="Geogebra.html">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="active">
+    <a href=""><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="">
+    <a href="Github.html">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/Slideshow_Callysto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/Slideshow_Callysto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/Slideshow_Callysto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#center-michael-lamoureux-center" class="nav-link"><center> Michael Lamoureux </center></a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#center-november-14-2018-center" class="nav-link"><center> November 14, 2018 </center></a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#note-on-rise" class="nav-link">Note on RISE:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#note" class="nav-link">Note:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#further-details" class="nav-link">Further details</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#notes-on-customizing-your-slideshow" class="nav-link">Notes on customizing your slideshow:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#why-bother" class="nav-link">Why bother?</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=Slideshow_Callysto.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="center-an-awesome-slide-show-center">
+<h1><center> An Awesome Slide Show </center><a class="headerlink" href="#center-an-awesome-slide-show-center" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="center-michael-lamoureux-center">
+<h2><center> Michael Lamoureux </center><a class="headerlink" href="#center-michael-lamoureux-center" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="center-november-14-2018-center">
+<h3><center> November 14, 2018 </center><a class="headerlink" href="#center-november-14-2018-center" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The goal here is to show a slideshow that is BETTER than BEAMER.</p>
+<p>We can use Metadata and CSS files to customize the slideshow.</p>
+<p>Use “Space bar” to advance the slides, “SHIFT-Space” to go backwards.</p>
+<p>Use “w” to get an overview of all your slides.</p>
+</div>
+<div class="section" id="note-on-rise">
+<h2>Note on RISE:<a class="headerlink" href="#note-on-rise" title="Permalink to this headline">¶</a></h2>
+<p>You may need to install RISE first. https://rise.readthedocs.io/en/stable/</p>
+<p>However, it is already installed for you on the Callysto hub.</p>
+</div>
+<div class="section" id="note">
+<h2>Note:<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<p>When creating the slideshow, use the “View” menu to select “Cell Toolbar/Slideshow.”</p>
+<p>Then each cell can be idenfied as a Slide, Sub-Slide, Fragment, etc.</p>
+<p>To switch into “Display” mode, click on the Slideshow icon in the menu bar.</p>
+<img src="Slideshow.png" alt="Slideshow icon" width="100" class="center" />
+<p>You need to edit the notebook’s metadata. Go to “Edit” menu in the notebook to find this.</p>
+<p>Here is what I added at the bottom of the metadata file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="o">...</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;livereveal&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;autolaunch&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s2">&quot;backimage&quot;</span><span class="p">:</span> <span class="s2">&quot;RockiesCallysto.jpg&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;footer&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;h3&gt;M. Lamoureux, Callysto &lt;/h3&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;h1&gt;Awesome Show&lt;/h1&gt;&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Make sure you save the notebook after you make these changes. The background image has to be in the folder.</p>
+<p>You can replace the background image with a theme. Some themes you might like to try:</p>
+<ul class="simple">
+<li><p>beige, black, blood, league, moon, night, serif, simple, sky, solarized, white.</p></li>
+</ul>
+<p>Enter this in the Metadata as “theme” : “sky”</p>
+<p>There are also files <strong>rise.css</strong> (for all notebooks in folder) and <strong>Slideshow_Callysto.css</strong> (for just this one notebook) that you can edit to make changes to the formatting.</p>
+<p>Here is what I put in <strong>Slideshow_Callysto.css</strong> to adjust the header and footer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#rise-header {</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">left</span><span class="p">:</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">#rise-footer {</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">right</span><span class="p">:</span> <span class="mi">10</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">#rise-backimage {</span>
+    <span class="n">opacity</span><span class="p">:</span> <span class="mf">0.50</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is what I put in <strong>rise.css</strong> to adjust font sizes (for fun).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">body</span><span class="o">.</span><span class="n">rise</span><span class="o">-</span><span class="n">enabled</span> <span class="n">div</span><span class="o">.</span><span class="n">inner_cell</span><span class="o">&gt;</span><span class="n">div</span><span class="o">.</span><span class="n">text_cell_render</span><span class="o">.</span><span class="n">rendered_html</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">90</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">div</span><span class="o">.</span><span class="n">inner_cell</span><span class="o">&gt;</span><span class="n">div</span><span class="o">.</span><span class="n">text_cell_render</span><span class="o">.</span><span class="n">rendered_html</span><span class="o">&gt;</span><span class="n">pre</span> <span class="p">{</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">0</span><span class="n">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">div</span><span class="o">.</span><span class="n">inner_cell</span><span class="o">&gt;</span><span class="n">div</span><span class="o">.</span><span class="n">text_cell_render</span><span class="o">.</span><span class="n">rendered_html</span><span class="o">&gt;</span><span class="n">pre</span><span class="o">&gt;</span><span class="n">code</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">90</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="further-details">
+<h2>Further details<a class="headerlink" href="#further-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notes-on-customizing-your-slideshow">
+<h3>Notes on customizing your slideshow:<a class="headerlink" href="#notes-on-customizing-your-slideshow" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://rise.readthedocs.io/en/docs_hot_fixes/customize.html">https://rise.readthedocs.io/en/docs_hot_fixes/customize.html</a></p>
+<p>Note it works well when customization is done in the Metadata. Not so well in the CSS files, in my experience.</p>
+</div>
+</div>
+<div class="section" id="why-bother">
+<h2>Why bother?<a class="headerlink" href="#why-bother" title="Permalink to this headline">¶</a></h2>
+<p>The point is I can do beautiful math like this:</p>
+<div class="math notranslate nohighlight">
+\[E = mc^2, \mbox{ or } \int_{-\pi}^{\pi} \sin(x) dx = 0.\]</div>
+<p>I can even put in live code directly.
+For instance, here we compute the Fibonacci numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">fib</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Slideshow.html" title="previous page">Slideshows</a>
+    <a class='right-next' id="next-link" href="Hiding.html" title="next page">Hiding code</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animations in D3 &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="">
+    <a href="YouTube.html">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="">
+    <a href="WebGL.html">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="">
+    <a href="Geogebra.html">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="">
+    <a href="Slideshow_Callysto.html"><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="">
+    <a href="Github.html">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/D3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/D3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/D3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#reload-the-page" class="nav-link">Reload the page</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notes-on-the-above-animation" class="nav-link">Notes on the above animation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notes-on-d3" class="nav-link">Notes on D3</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#fancier-code" class="nav-link">Fancier code</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id1" class="nav-link">Reload the page</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#and-that-s-it" class="nav-link">And that’s it.</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=D3.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="animations-in-d3">
+<h1>Animations in D3<a class="headerlink" href="#animations-in-d3" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">html_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;div id=&quot;myDisplay&quot;&gt;&lt;/div&gt;</span>
+<span class="s1">&lt;script&gt; </span>
+<span class="s1">    require.config({paths: {d3: &quot;https://d3js.org/d3.v5.min&quot;}});</span>
+<span class="s1">    require([&quot;d3&quot;], function(d3) {</span>
+<span class="s1">        var mySVG = d3.select(&quot;#myDisplay&quot;) </span>
+<span class="s1">          .append(&quot;svg&quot;)</span>
+<span class="s1">          .attr(&quot;width&quot;, 300)</span>
+<span class="s1">          .attr(&quot;height&quot;, 300);    </span>
+<span class="s1">       mySVG.append(&quot;circle&quot;)</span>
+<span class="s1">          .style(&quot;fill&quot;, &quot;red&quot;)</span>
+<span class="s1">          .attr(&quot;r&quot;, 130)</span>
+<span class="s1">          .attr(&quot;cx&quot;, 150)</span>
+<span class="s1">          .attr(&quot;cy&quot;, 150)</span>
+<span class="s1">          .transition()</span>
+<span class="s1">             .delay(100)</span>
+<span class="s1">             .duration(20000)  </span>
+<span class="s1">             .attr(&quot;r&quot;, 10)</span>
+<span class="s1">             .attr(&quot;cx&quot;, 290)</span>
+<span class="s1">             .style(&quot;fill&quot;, &quot;blue&quot;);             </span>
+<span class="s1">    });</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="myDisplay"></div>
+<script> 
+    require.config({paths: {d3: "https://d3js.org/d3.v5.min"}});
+    require(["d3"], function(d3) {
+        var mySVG = d3.select("#myDisplay") 
+          .append("svg")
+          .attr("width", 300)
+          .attr("height", 300);    
+       mySVG.append("circle")
+          .style("fill", "red")
+          .attr("r", 130)
+          .attr("cx", 150)
+          .attr("cy", 150)
+          .transition()
+             .delay(100)
+             .duration(20000)  
+             .attr("r", 10)
+             .attr("cx", 290)
+             .style("fill", "blue");             
+    });
+</script>
+</div></div>
+</div>
+<div class="section" id="reload-the-page">
+<h2>Reload the page<a class="headerlink" href="#reload-the-page" title="Permalink to this headline">¶</a></h2>
+<p>to restart the animation. It only runs for 20 seconds.</p>
+</div>
+<div class="section" id="notes-on-the-above-animation">
+<h2>Notes on the above animation<a class="headerlink" href="#notes-on-the-above-animation" title="Permalink to this headline">¶</a></h2>
+<p>This is a very simple D3 animation, which should work in any Jupyter hub as well as on a Jupyter book. We kept is as simple as possible, to show the main feature of how to use D3 in a Jupyter noteboo.</p>
+<p>In the above code, we create some html text which includes a place (<strong>div</strong>) to display some material, then some javascript code (<strong>script</strong>) to create an svg canvas to draw in, then draw a circle and animate it.</p>
+</div>
+<div class="section" id="notes-on-d3">
+<h2>Notes on D3<a class="headerlink" href="#notes-on-d3" title="Permalink to this headline">¶</a></h2>
+<p>D3 is an amazing collection of tools for creating Data Driven Documents (DDD = D3). It is also a great tool for creating animations. You can read about it here: https://d3js.org/</p>
+<p>Several issues arise in using D3. First, it is written in Javascript so you need to learn Javascript to do this well. Second, your Jupyter notebook has security measures in place to avoid what it suspects might be malicious (dangerous) code. Third, the D3 libraries and the Jupyter security keeps changing, so code you write today may become inoperative in a just a few months. So be carefu!</p>
+<p>To learn <strong>Javascript</strong> you can search online for tutorials.</p>
+<p>To get your notebook to <strong>bypass security,</strong> we write the Javascript code in into a text file, then use the <strong>display</strong> and <strong>HTML</strong> functions from module <strong>IPython.core.display</strong>  This is what works in Summer 2020. Last year, we did it a different way, which no longer works. We then use some Python code to load in this .html code.</p>
+</div>
+<div class="section" id="fancier-code">
+<h2>Fancier code<a class="headerlink" href="#fancier-code" title="Permalink to this headline">¶</a></h2>
+<p>Often we like to split up our HTML code into portions for CSS commansd (Cascading Style Sheets), Javascipt code, and then the body of the HTML document.</p>
+<p>Here is an example we found at: https://www.bogotobogo.com/python/IPython/iPython_Jupyter_Notebook_with_Embedded_D3.php</p>
+<p><strong>First step</strong> is to load in the a few Python modules to help us out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="k">import</span> <span class="n">Template</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Next,</strong> we create an HTML template, some CSS text (empty) and a Javascript template. We will pass variables and text to the templates using the substitute command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;style&gt; $css_text &lt;/style&gt;</span>
+<span class="s1">&lt;div id=&quot;animation&quot;&gt;&lt;/div&gt;</span>
+<span class="s1">&lt;script&gt; $js_text &lt;/script&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">css_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">js_text_template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    require.config({paths: {d3: &quot;https://d3js.org/d3.v5.min&quot;}});</span>
+<span class="s1">    require([&quot;d3&quot;], function(d3) {</span>
+<span class="s1">        console.log(&quot;in require&quot;);</span>
+<span class="s1">        console.log(d3.version)</span>
+<span class="s1">        console.log(d3)</span>
+<span class="s1">        var bogoSVG = d3.select(&quot;#$bogoanimation&quot;) </span>
+<span class="s1">          .append(&quot;svg&quot;)</span>
+<span class="s1">          .attr(&quot;width&quot;, 300)</span>
+<span class="s1">          .attr(&quot;height&quot;, 300);    </span>
+
+<span class="s1">        var data = $python_data ;</span>
+<span class="s1">        bogoSVG.append(&quot;circle&quot;)</span>
+<span class="s1">          .style(&quot;stroke&quot;, &quot;gray&quot;)</span>
+<span class="s1">          .style(&quot;fill&quot;, &quot;cyan&quot;)</span>
+<span class="s1">          .attr(&quot;r&quot;, data[0][&#39;r&#39;])</span>
+<span class="s1">          .attr(&quot;cx&quot;, data[0][&#39;cx&#39;])</span>
+<span class="s1">          .attr(&quot;cy&quot;, data[0][&#39;cy&#39;])</span>
+<span class="s1">          .transition()</span>
+<span class="s1">             .delay(100)</span>
+<span class="s1">             .duration(20000)  </span>
+<span class="s1">             .attr(&quot;r&quot;, 10)</span>
+<span class="s1">             .attr(&quot;cx&quot;, data[0][&#39;cx&#39;])</span>
+<span class="s1">             .style(&quot;fill&quot;, &quot;blue&quot;); </span>
+<span class="s1">            </span>
+<span class="s1">       });</span>
+<span class="s1">       </span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>At this point, we use the substitute command to fill in the various data into the open variables in the templates. Then we call display(HTML(…)) as in the first example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">js_text</span> <span class="o">=</span> <span class="n">js_text_template</span><span class="o">.</span><span class="n">substitute</span><span class="p">({</span><span class="s1">&#39;python_data&#39;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([{</span><span class="s1">&#39;r&#39;</span><span class="p">:</span> <span class="mi">130</span><span class="p">,</span> <span class="s1">&#39;cx&#39;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span> <span class="s1">&#39;cy&#39;</span><span class="p">:</span> <span class="mi">150</span><span class="p">}]),</span>
+                                       <span class="s1">&#39;bogoanimation&#39;</span><span class="p">:</span> <span class="s1">&#39;animation&#39;</span><span class="p">})</span>
+
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_template</span><span class="o">.</span><span class="n">substitute</span><span class="p">({</span><span class="s1">&#39;css_text&#39;</span><span class="p">:</span> <span class="n">css_text</span><span class="p">,</span> <span class="s1">&#39;js_text&#39;</span><span class="p">:</span> <span class="n">js_text</span><span class="p">})))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<style> 
+ </style>
+<div id="animation"></div>
+<script> 
+    require.config({paths: {d3: "https://d3js.org/d3.v5.min"}});
+    require(["d3"], function(d3) {
+        console.log("in require");
+        console.log(d3.version)
+        console.log(d3)
+        var bogoSVG = d3.select("#animation") 
+          .append("svg")
+          .attr("width", 300)
+          .attr("height", 300);    
+
+        var data = [{"r": 130, "cx": 150, "cy": 150}] ;
+        bogoSVG.append("circle")
+          .style("stroke", "gray")
+          .style("fill", "cyan")
+          .attr("r", data[0]['r'])
+          .attr("cx", data[0]['cx'])
+          .attr("cy", data[0]['cy'])
+          .transition()
+             .delay(100)
+             .duration(20000)  
+             .attr("r", 10)
+             .attr("cx", data[0]['cx'])
+             .style("fill", "blue"); 
+
+       });
+
+ </script>
+</div></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Reload the page<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>to restart the animation. It only runs for 20 seconds.</p>
+</div>
+<div class="section" id="and-that-s-it">
+<h2>And that’s it.<a class="headerlink" href="#and-that-s-it" title="Permalink to this headline">¶</a></h2>
+<p>Some things to look out for:</p>
+<ul class="simple">
+<li><p>we need the require and require.config commands to load in the D3 files properly.</p></li>
+<li><p>it is possible to use the ##javascipt magic command directly. But it does not work with Jupyter Book.</p></li>
+<li><p>you will need to read the D3 documentation and learn the Javascript programming language to make good use of this tool.</p></li>
+</ul>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

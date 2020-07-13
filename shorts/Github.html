@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Using Git and GitHub &#8212; Callysto Shorts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespaces in Python" href="Namespace.html" />
+    <link rel="prev" title="Hiding code" href="Hiding.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Callysto Shorts</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Welcome to Callysto</a>
+  </li>
+  <li class="">
+    <a href="README.html">Callysto Shorts</a>
+  </li>
+  <li class="">
+    <a href="master.html">Master Index of Notebooks</a>
+  </li>
+  <li class="">
+    <a href="Images.html">Including Images</a>
+  </li>
+  <li class="">
+    <a href="GIFs.html">Including GIFs</a>
+  </li>
+  <li class="">
+    <a href="YouTube.html">Including YouTube videos</a>
+  </li>
+  <li class="">
+    <a href="HTML_Drawing.html">Drawing in HTML and SVG</a>
+  </li>
+  <li class="">
+    <a href="Matplotlib.html">Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Matplot3D.html">3D Plotting with matplotlib</a>
+  </li>
+  <li class="">
+    <a href="MatplotAnimation.html">Animation in Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="Plotly.html">Plotting with Plotly</a>
+  </li>
+  <li class="">
+    <a href="Plotly3D.html">3D Plotting in Plotly</a>
+  </li>
+  <li class="">
+    <a href="3D_graphics.html">3D graphics</a>
+  </li>
+  <li class="">
+    <a href="WebGL.html">Including WebGL animations</a>
+  </li>
+  <li class="">
+    <a href="Pylab.html">Using Pylab</a>
+  </li>
+  <li class="">
+    <a href="Sounds.html">Including music and sounds</a>
+  </li>
+  <li class="">
+    <a href="SynthSound.html">Creating synthetic sounds</a>
+  </li>
+  <li class="">
+    <a href="Banners.html">Including Callysto Banners</a>
+  </li>
+  <li class="">
+    <a href="Widgets.html">Widgets for interactive notebooks.</a>
+  </li>
+  <li class="">
+    <a href="ProgressBar.html">Implementing a progress bar</a>
+  </li>
+  <li class="">
+    <a href="Geogebra.html">Including Geogebra</a>
+  </li>
+  <li class="">
+    <a href="Slideshow.html">Slideshows</a>
+  </li>
+  <li class="">
+    <a href="Slideshow_Callysto.html"><center> An Awesome Slide Show </center></a>
+  </li>
+  <li class="">
+    <a href="Hiding.html">Hiding code</a>
+  </li>
+  <li class="active">
+    <a href="">Using Git and GitHub</a>
+  </li>
+  <li class="">
+    <a href="Namespace.html">Namespaces in Python</a>
+  </li>
+  <li class="">
+    <a href="ImportingData.html">Importing Data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/shorts/Github.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/shorts/master?urlpath=tree/shorts/Github.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/shorts&urlpath=tree/shorts/shorts/Github.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#warning" class="nav-link">WARNING:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#definitions" class="nav-link">Definitions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#configuration" class="nav-link">Configuration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#commands" class="nav-link">Commands</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#clone" class="nav-link">Clone</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#status" class="nav-link">Status</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#check-what-has-been-happening" class="nav-link">Check what has been happening</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pull-changes-from-remote" class="nav-link">Pull changes from remote</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fetch-changes-from-remote" class="nav-link">Fetch changes from remote</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#stash" class="nav-link">Stash</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#stash-list" class="nav-link">Stash list</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#stash-pop" class="nav-link">Stash pop</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#branches" class="nav-link">Branches</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#list-branches" class="nav-link">List branches</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#checkout-a-branch" class="nav-link">Checkout a branch</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#create-a-new-branch" class="nav-link">Create a new branch</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#change-to-a-branch" class="nav-link">Change to a branch</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#making-commits" class="nav-link">Making Commits</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#stage-changes" class="nav-link">stage changes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#commit-to-local" class="nav-link">commit to local</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#push-to-remote" class="nav-link">push to remote</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#permanently-discard-all-local-changes-to-all-files" class="nav-link">permanently discard all local changes to all files</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#creating-a-new-repository-to-save-your-work-on-github" class="nav-link">Creating a new repository to save your work on GitHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#learning-more-about-git-and-github" class="nav-link">Learning more about Git and GitHub</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fshorts&branch=master&subPath=Github.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="section" id="using-git-and-github">
+<h1>Using Git and GitHub<a class="headerlink" href="#using-git-and-github" title="Permalink to this headline">¶</a></h1>
+<p>Git is a version control system to collaborate on code and track changes. Git responsitories can be hosted on <a class="reference external" href="https://github.com">GitHub</a>.</p>
+<p>You can learn about git and github here: https://rogerdudler.github.io/git-guide/</p>
+<div class="section" id="warning">
+<h2>WARNING:<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<p>The git commands will create and remove files and directories. Normally, this is what you want. However, if you don’t know what you are doing, you may accidentally erase some files that you did not want to erase!</p>
+<p>For this reason, you must be very careful before running any of the git commands in this notebook. For this reason, there are no executable cells in this notebook. If you want to run a git command in this notebook, you will need to type it in yourself, or copy and paste into a code cell before running.</p>
+</div>
+<div class="section" id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>repository</strong> is a place (folder) with all the files and history of a project. It can be called a <em>repo</em> for short.</p>
+<p>A <strong>remote</strong> repo is on a server, usually a site such as <a class="reference external" href="http://github.com">GitHub.com</a>, and it can be accessed by multiple users.</p>
+<p>A <strong>local</strong> repo is a copy on your computer or the <a class="reference external" href="https://hub.callysto.ca">Hub</a> where you are using this notebook.</p>
+<p>A <strong>branch</strong> is a copy or version of a project that is parallel to the main project.</p>
+<p>The <strong>HEAD</strong> is a reference pointer to the branch you’re currently working on.</p>
+<p>A <strong>fork</strong> is like a branch, but it’s a copy of someone else’s repo that you don’t have write access to. It can be merged (via [pull request or PR) back to the original repo.</p>
+<p>A <strong>pull request</strong>, or <a class="reference external" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">PR</a>, is a way to notify other users about changes and collaborate before committing.</p>
+<p>To <strong>commit</strong> means to save your changes.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The first step is set up your Git environment, if you haven’t done so already. Change the values in the following cell and then run it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git config --global user.email &quot;me@example.com&quot;
+!git config --global user.name &quot;Eric Idle&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clone">
+<h3>Clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h3>
+<p>to clone a repository (download it from a remote repo)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git clone https://github.com/callysto/curriculum-notebooks.git
+</pre></div>
+</div>
+<p>You may then want to copy this notebook into that new folder. Then you can close this notebook and open that new copy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!cp Github.ipynb curriculum-notebooks
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h3>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<p>check on files and commits in the current folder.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git status
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-what-has-been-happening">
+<h3>Check what has been happening<a class="headerlink" href="#check-what-has-been-happening" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git log
+</pre></div>
+</div>
+</div>
+<div class="section" id="pull-changes-from-remote">
+<h3>Pull changes from remote<a class="headerlink" href="#pull-changes-from-remote" title="Permalink to this headline">¶</a></h3>
+<p>This downloads any changes that are in the remote repo but not yet present in your local repository.</p>
+<p>It will try to <strong>merge</strong> the changes into your local repo, but you may get a notification about <a class="reference external" href="https://docs.microsoft.com/en-us/azure/devops/repos/git/merging?view=azure-devops&amp;tabs=command-line">merge conflicts</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git pull
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git pull origin master
+</pre></div>
+</div>
+</div>
+<div class="section" id="fetch-changes-from-remote">
+<h3>Fetch changes from remote<a class="headerlink" href="#fetch-changes-from-remote" title="Permalink to this headline">¶</a></h3>
+<p>if you’d prefer to just download remote changes but not integrate them into your local environment (integrating then requires the <code class="docutils literal notranslate"><span class="pre">merge</span></code> command)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git fetch --all
+!git merge
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="stash">
+<h2>Stash<a class="headerlink" href="#stash" title="Permalink to this headline">¶</a></h2>
+<p>to <a class="reference external" href="https://www.git-scm.com/docs/git-stash">temporarily store your local changes</a> so you can go back to them later</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git stash
+</pre></div>
+</div>
+<div class="section" id="stash-list">
+<h3>Stash list<a class="headerlink" href="#stash-list" title="Permalink to this headline">¶</a></h3>
+<p>to check on your stashes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git stash list
+</pre></div>
+</div>
+</div>
+<div class="section" id="stash-pop">
+<h3>Stash pop<a class="headerlink" href="#stash-pop" title="Permalink to this headline">¶</a></h3>
+<p>apply stashed changes (from the top of the stash list) back on to current branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git stash pop
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
+<p>A branch is a copy or version of a project that is parallel to the main project.</p>
+<div class="section" id="list-branches">
+<h3>List branches<a class="headerlink" href="#list-branches" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git branch -a
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkout-a-branch">
+<h3>Checkout a branch<a class="headerlink" href="#checkout-a-branch" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git checkout remotes/origin/master
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-new-branch">
+<h3>Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git checkout origin/master -b NameOfNewBranch
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-to-a-branch">
+<h3>Change to a branch<a class="headerlink" href="#change-to-a-branch" title="Permalink to this headline">¶</a></h3>
+<p>if you’re not already there</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git checkout --track origin/NameOfBranch
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="making-commits">
+<h2>Making Commits<a class="headerlink" href="#making-commits" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stage-changes">
+<h3>stage changes<a class="headerlink" href="#stage-changes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git add changed_file.ipynb
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git add .
+</pre></div>
+</div>
+</div>
+<div class="section" id="commit-to-local">
+<h3>commit to local<a class="headerlink" href="#commit-to-local" title="Permalink to this headline">¶</a></h3>
+<p>Change the commit message in the quotation marks to reflect what this commit does</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git commit -m &quot;Fix typographical error&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="push-to-remote">
+<h3>push to remote<a class="headerlink" href="#push-to-remote" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git push
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git push -u origin NameOfBranch
+</pre></div>
+</div>
+</div>
+<div class="section" id="permanently-discard-all-local-changes-to-all-files">
+<h3>permanently discard all local changes to all files<a class="headerlink" href="#permanently-discard-all-local-changes-to-all-files" title="Permalink to this headline">¶</a></h3>
+<p>(use with caution)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!git reset --hard
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-a-new-repository-to-save-your-work-on-github">
+<h2>Creating a new repository to save your work on GitHub<a class="headerlink" href="#creating-a-new-repository-to-save-your-work-on-github" title="Permalink to this headline">¶</a></h2>
+<p>Run each of these command in a New Terminal in your Callysto Hub.</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Change directories until you are in the directory (folder) that you want to save on GitHub.
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">my-interesting-folder</span></code></p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>From inside the folder you want to save, set it up as a git repo with these commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First commit, or whatever&quot;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Log in to <a class="reference external" href="https://github.com">GitHub</a> and create a new repo. As an example we call it Test1. Do not include any initialization files.</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Add your GitHub account repo as the origin for your local repo. (Here, acct_name should be replaced with your github account. Test1.git is the name of the github repo you created.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">acct_name</span><span class="o">/</span><span class="n">Test1</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Now push your local files onto the github repo using this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li></li>
+</ol>
+<p>Git will ask you for your GitHub account name and password.</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>You can now check on GitHub to see that your online repo has been populated with the files you wanted.</p>
+<ol class="simple">
+<li></li>
+</ol>
+<p>From now on, you can pull and push items between your local repo and the GitHub repo as you desire.</p>
+</div>
+<div class="section" id="learning-more-about-git-and-github">
+<h2>Learning more about Git and GitHub<a class="headerlink" href="#learning-more-about-git-and-github" title="Permalink to this headline">¶</a></h2>
+<p>For more information about these and other commands, check the <a class="reference external" href="https://git-scm.com/docs">git documentation</a> or <a class="reference external" href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line">GitHub help</a>.</p>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Hiding.html" title="previous page">Hiding code</a>
+    <a class='right-next' id="next-link" href="Namespace.html" title="next page">Namespaces in Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
